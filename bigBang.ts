@@ -1,44 +1,34 @@
 import * as fs from 'fs';
 
 function generateArray(): string[] {
-    // Initialize an empty array to hold the output strings
-    let arr: string[] = [];
+    let arr: string[] = [];          // Initialize an empty array to hold the output strings
 
     for (let i = 1; i <= 100; i++) {
-        // Initialize an empty string for each iteration
-        let output = '';
 
-        // Check if the number is divisible by 3
-        // If so, append 'BIG' to the output string
-        if (i % 3 === 0) {
-            output += 'BIG';
+        let output = '';             // Initialize an empty string for each iteration
+
+        if (i % 3 === 0) {           // Check if the number is divisible by 3
+            output += 'BIG';         // If it's true, append 'BIG' to the output string
         }
 
-        // Check if the number is divisible by 5
-        // If so, append 'BANG' to the output string
-        if (i % 5 === 0) {
-            output += 'BANG';
+        if (i % 5 === 0) {           // Check if the number is divisible by 5
+            output += 'BANG';        // If true, append 'BANG' to the output string
         }
 
-        // If output is still an empty string, the number was not divisible by 3 or 5
-        // In this case, convert int to the string representation of the current number
-        if (output === '') {
-            output = i.toString();
+        if (output === '') {         // If output is still an empty string, the number was not divisible by 3 or 5
+            output = i.toString();   // In this case, convert current number {int} to {string} representation
         }
-      // Add the finalized output string to the array
-        arr.push(output);
+
+        arr.push(output);            // Add the finalized output string to the array
     }
 
     return arr;
 }
 
-// Generate the array
-const outputArray = generateArray();
+const outputArray = generateArray();                      // Run the array
 
-// Convert to JSON string
-const jsonOutput = JSON.stringify(outputArray, null, 2);
+const jsonOutput = JSON.stringify(outputArray, null, 2);  // Convert to JSON string
 
-// Write to output.json
-fs.writeFileSync('output.json', jsonOutput);
+fs.writeFileSync('output.json', jsonOutput);              // Write to output.json
 
-console.log('Output written to output.json');
+console.log('Output written to output.json');             // check log for debugging purpose
