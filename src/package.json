@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.5.9"
+  },
+  "name": "big_bang",
+  "version": "1.0.0",
+  "main": "bigBang.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
